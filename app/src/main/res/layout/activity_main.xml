@@ -7,9 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="카카오톡 Clone Coding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
