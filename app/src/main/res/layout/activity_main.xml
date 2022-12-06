@@ -1,21 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="카카오톡 Clone Coding"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- top navigation -->
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_top"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="메인"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgv_search"
+            android:src="@drawable/icon_search"
+            android:layout_toLeftOf="@id/imgv_chatadd"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgv_chatadd"
+            android:src="@drawable/icon_chatadd"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/imgv_openchat"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgv_openchat"
+            android:src="@drawable/icon_openchat"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/imgv_setting"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imgv_setting"
+            android:src="@drawable/icon_setting"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
