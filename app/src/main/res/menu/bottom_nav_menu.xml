@@ -13,26 +13,26 @@
 
     <item
         android:id="@+id/btm_item1"
-        android:icon="@drawable/icon_match"
+        android:icon="@drawable/icon_search"
         android:enabled="true"
         android:title="경기"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/btm_item2"
-        android:icon="@drawable/icon_news"
+        android:icon="@drawable/icon_search"
         android:enabled="true"
         android:title="뉴스"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/btm_item3"
-        android:icon="@drawable/icon_league"
+        android:icon="@drawable/icon_search"
         android:enabled="true"
         android:title="리그"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/btm_item4"
-        android:icon="@drawable/icon_follow"
+        android:icon="@drawable/icon_search"
         android:enabled="true"
         android:title="팔로잉"
         app:showAsAction="ifRoom"/>
