@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        showAsAction : 보이는 설정
+        always => 항상 보이게 처리
+        never => 안보이게 처리
+        ifRoom => 공간이 있을때 보이게 처리
+    -->
+
+
+
+    <item
+        android:id="@+id/btm_item1"
+        android:icon="@drawable/icon_match"
+        android:enabled="true"
+        android:title="경기"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/btm_item2"
+        android:icon="@drawable/icon_news"
+        android:enabled="true"
+        android:title="뉴스"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/btm_item3"
+        android:icon="@drawable/icon_league"
+        android:enabled="true"
+        android:title="리그"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/btm_item4"
+        android:icon="@drawable/icon_follow"
+        android:enabled="true"
+        android:title="팔로잉"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/btm_item5"
+        android:icon="@drawable/icon_burger"
+        android:enabled="true"
+        android:title="더보기"
+        app:showAsAction="ifRoom"/>
+</menu>
