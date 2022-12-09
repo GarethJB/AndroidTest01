@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myblog.MyblogFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/ic_launcher_background"
+        android:id="@+id/rel_myblog"
+        android:padding="20dp"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <!-- 프로필 그룹 -->
+        <TextView
+            android:id="@+id/tv_myblog_today"
+            android:text="오늘 2"
+            android:textSize="12dp"
+            android:textColor="#fff"
+            android:layout_above="@id/tv_myblog_blogname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_myblog_total"
+            android:text="전체 632"
+            android:textSize="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff"
+            android:layout_toRightOf="@id/tv_myblog_today"
+            android:layout_above="@id/tv_myblog_blogname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_myblog_blogname"
+            android:text="JUBIN_Blog"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@id/imgv_myblog_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/imgv_myblog_profile"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@id/btn_myblog_homeset"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/imgv_myblog_profile"
+            android:layout_above="@id/btn_myblog_homeset"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_myblog_name"
+                android:text="주빈"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_myblog_neighbor"
+                android:text="9명 이웃"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- 공유하기 -->
+        <ImageView
+            android:id="@+id/imgv_myblog_share"
+            android:src="@drawable/icon_burger"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@id/btn_myblog_homeset"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <!-- 버튼 그룹 -->
+        <Button
+            android:id="@+id/btn_myblog_stat"
+            android:background="@color/material_dynamic_primary80"
+            android:text="목록"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btn_myblog_neighbor"
+            android:layout_alignParentBottom="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btn_myblog_neighbor"
+            android:background="@color/material_dynamic_primary80"
+            android:text="목록"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btn_myblog_hello"
+            android:layout_alignParentBottom="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btn_myblog_hello"
+            android:background="@color/material_dynamic_primary80"
+            android:text="목록"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btn_myblog_list"
+            android:layout_alignParentBottom="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btn_myblog_list"
+            android:background="@color/material_dynamic_primary80"
+            android:text="목록"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btn_myblog_homeset"
+            android:layout_alignParentBottom="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btn_myblog_homeset"
+            android:background="@color/material_dynamic_primary80"
+            android:text="홈편집"
+            android:layout_alignParentBottom="true"
+            android:layout_width="160dp"
+            android:layout_height="48dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <!-- 글옵션 -->
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:text="전체글"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabl_myblog"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+
+        <!-- 글목록 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_myblog_list"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

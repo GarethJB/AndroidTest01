@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newsfeed.NewsfeedFragment"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 모먼트 -->
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+                <TextView
+                    android:text="모먼트"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#535353"
+                    android:padding="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_newsfeed_m1"
+                    android:text="만들기"
+                    android:textSize="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/tv_newsfeed_m2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_newsfeed_m2"
+                    android:text="모먼트홈"
+                    android:textSize="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_newsfeed_moment"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"/>
+
+            <ImageView
+                android:background="#EAEAEA"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <!-- 뉴스피드 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_newsfeed_feed"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>
