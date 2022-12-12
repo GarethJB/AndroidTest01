@@ -15,31 +15,32 @@
         android:id="@+id/btm_item1"
         android:icon="@drawable/icon_search"
         android:enabled="true"
-        android:title="경기"
+        android:title="newsfeed"
+
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/btm_item2"
         android:icon="@drawable/icon_search"
         android:enabled="true"
-        android:title="뉴스"
+        android:title="recommend"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/btm_item3"
         android:icon="@drawable/icon_search"
         android:enabled="true"
-        android:title="리그"
+        android:title="writing"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/btm_item4"
         android:icon="@drawable/icon_search"
         android:enabled="true"
-        android:title="팔로잉"
+        android:title="notice"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/btm_item5"
         android:icon="@drawable/icon_burger"
         android:enabled="true"
-        android:title="더보기"
+        android:title="myblog"
         app:showAsAction="ifRoom"/>
 </menu>

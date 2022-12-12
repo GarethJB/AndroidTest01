@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if(item.getItemId() == R.id.btm_item3) {
                     tv_top.setText("");
                     changeFragment(new WritingFragment());
+                    return false;
                 }else if(item.getItemId() == R.id.btm_item4) {
                     tv_top.setText("내소식");
                     changeFragment(new NoticeFragment());
