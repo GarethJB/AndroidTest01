@@ -164,11 +164,34 @@
 
 
         <!-- 글목록 -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recv_myblog_list"
-            android:padding="10dp"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_myblog_photo"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_myblog_list"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_myblog_feed"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_myblog_video"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
     </LinearLayout>
 
 </LinearLayout>
