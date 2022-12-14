@@ -41,7 +41,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 3;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

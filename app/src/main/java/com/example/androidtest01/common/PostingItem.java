@@ -19,7 +19,7 @@ public class PostingItem {
                 R.drawable.profile_img8
         };
 
-           for (int i = 0; i < itemNum; i++) {
+           for (int i = 1; i < itemNum; i++) {
                 list.add(new PostingDTO("닉네임"+i, "블로그제목"+i, "카테고리"+i, "제목"+i, "2022. 02. 01", "내용"+i, "댓글"+i, imgArr[0], imgArr[0], 1 , 5 , 6 ));
             }
            return list;
