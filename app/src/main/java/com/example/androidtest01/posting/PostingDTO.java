@@ -1,23 +1,25 @@
 package com.example.androidtest01.posting;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class PostingDTO {
-    private String name, title, content, comment, like, hits, neighbor;
-    private int profile, photo;
-    private Date date;
+public class PostingDTO implements Serializable {
+    private String name, blogname, category, title, date, contents, comment;
+    private int profile, photo, neighbor, likes, comments;
 
-    public PostingDTO(String name, String title, String content, String comment, String like, String hits, String neighbor, int profile, int photo, Date date) {
+    public PostingDTO(String name, String blogname, String category, String title, String date, String contents, String comment, int profile, int photo, int neighbor, int likes, int comments) {
         this.name = name;
+        this.blogname = blogname;
+        this.category = category;
         this.title = title;
-        this.content = content;
+        this.date = date;
+        this.contents = contents;
         this.comment = comment;
-        this.like = like;
-        this.hits = hits;
-        this.neighbor = neighbor;
         this.profile = profile;
         this.photo = photo;
-        this.date = date;
+        this.neighbor = neighbor;
+        this.likes = likes;
+        this.comments = comments;
     }
 
     public String getName() {
@@ -28,6 +30,22 @@ public class PostingDTO {
         this.name = name;
     }
 
+    public String getBlogname() {
+        return blogname;
+    }
+
+    public void setBlogname(String blogname) {
+        this.blogname = blogname;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -36,12 +54,20 @@ public class PostingDTO {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
+    public String getDate() {
+        return date;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
     }
 
     public String getComment() {
@@ -50,30 +76,6 @@ public class PostingDTO {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getLike() {
-        return like;
-    }
-
-    public void setLike(String like) {
-        this.like = like;
-    }
-
-    public String getHits() {
-        return hits;
-    }
-
-    public void setHits(String hits) {
-        this.hits = hits;
-    }
-
-    public String getNeighbor() {
-        return neighbor;
-    }
-
-    public void setNeighbor(String neighbor) {
-        this.neighbor = neighbor;
     }
 
     public int getProfile() {
@@ -92,11 +94,27 @@ public class PostingDTO {
         this.photo = photo;
     }
 
-    public Date getDate() {
-        return date;
+    public int getNeighbor() {
+        return neighbor;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setNeighbor(int neighbor) {
+        this.neighbor = neighbor;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getComments() {
+        return comments;
+    }
+
+    public void setComments(int comments) {
+        this.comments = comments;
     }
 }

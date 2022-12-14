@@ -1,5 +1,7 @@
 package com.example.androidtest01;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -12,6 +14,7 @@ import com.example.androidtest01.myblog.MyblogFragment;
 import com.example.androidtest01.newsfeed.NewsfeedFragment;
 import com.example.androidtest01.notice.NoticeFragment;
 import com.example.androidtest01.recommend.RecommendFragment;
+import com.example.androidtest01.writing.WritingActivity;
 import com.example.androidtest01.writing.WritingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -40,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     changeFragment(new RecommendFragment());
                 }else if(item.getItemId() == R.id.btm_item3) {
                     tv_top.setText("");
-                    changeFragment(new WritingFragment());
+                    Intent intent = new Intent(MainActivity.this, WritingActivity.class);
+                    startActivity(intent);
                     return false;
                 }else if(item.getItemId() == R.id.btm_item4) {
                     tv_top.setText("내소식");

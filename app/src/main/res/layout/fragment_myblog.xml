@@ -165,6 +165,7 @@
 
         <!-- 글목록 -->
         <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.recyclerview.widget.RecyclerView
@@ -175,6 +176,7 @@
                 android:layout_height="wrap_content"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_myblog_list"
+                android:visibility="visible"
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

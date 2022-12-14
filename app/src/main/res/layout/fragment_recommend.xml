@@ -6,106 +6,127 @@
     tools:context=".recommend.RecommendFragment"
     android:orientation="vertical">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 추천목록 1 -->
+            <!-- 핫토픽 -->
+
             <LinearLayout
-                android:padding="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btn_rcm_rlist0"
-                    android:text="블로그추천"
-                    android:textSize="12dp"
-                    android:textColor="#fff"
-                    android:backgroundTint="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 추천목록 1 -->
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <Button
-                    android:id="@+id/btn_rcm_rlistadd"
-                    android:text="+"
-                    android:textSize="12dp"
-                    android:textColor="#000"
-                    android:backgroundTint="#fff"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/btn_rcm_rlist0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#000"
+                        android:text="블로그추천"
+                        android:textColor="#fff"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_rcm_rlistadd"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:backgroundTint="#fff"
+                        android:text="+"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!-- 추천리스트1 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_rcm_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+
+                <!-- 추천 모먼트 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#EAEAEA"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="추천 모먼트"
+                        android:textColor="#535353"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_rcm_madd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="더보기"
+                        android:textColor="#9E9E9E"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_rcm_moment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:background="#EAEAEA"
+                    android:padding="10dp" />
+
+                <!-- 추천리스트2 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_rcm_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+                <!-- 오늘의 동영상 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#EAEAEA"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘의 동영상"
+                        android:textColor="#535353"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_rcm_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:background="#EAEAEA"
+                    android:padding="10dp" />
+
+                <!-- 추천리스트3 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_rcm_list3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+
             </LinearLayout>
 
-            <!-- 추천리스트1 -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_list1"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <!-- 추천 모먼트 -->
-            <RelativeLayout
-                android:background="#EAEAEA"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-                <TextView
-                    android:text="추천 모먼트"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#535353"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tv_rcm_madd"
-                    android:text="더보기"
-                    android:textSize="16dp"
-                    android:textColor="#9E9E9E"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_m"
-                android:background="#EAEAEA"
-                android:padding="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"/>
-
-            <!-- 추천리스트2 -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_list2"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <!-- 오늘의 동영상 -->
-            <RelativeLayout
-                android:background="#EAEAEA"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-                <TextView
-                    android:text="오늘의 동영상"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#535353"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_video"
-                android:background="#EAEAEA"
-                android:padding="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"/>
-
-            <!-- 핫토픽 -->
             <RelativeLayout
                 android:background="#74E5F4"
                 android:gravity="center_vertical"
@@ -138,15 +159,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"/>
 
-            <!-- 추천리스트3 -->
+            <!-- 추천리스트4 -->
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_list3"
+                android:id="@+id/recv_rcm_list4"
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
         </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-
-    </ScrollView>
 </LinearLayout>
+
