@@ -9,117 +9,132 @@
 
     <!-- top navigation -->
     <RelativeLayout
-        android:gravity="center_vertical"
         android:paddingHorizontal="10dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
         <ImageView
-            android:id="@+id/imgv_posting_back"
-            android:src="@drawable/icon_search"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
+            android:id="@+id/imgv_back"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
         <TextView
-            android:id="@+id/tv_posting_blogname"
+            android:id="@+id/tv_blogname"
             android:text="블로그제목"
-            android:textSize="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"/>
+            android:layout_height="wrap_content"/>
         <ImageView
-            android:id="@+id/imgv_posting_search"
+            android:id="@+id/imgv_search"
             android:src="@drawable/icon_search"
             android:layout_marginLeft="10dp"
-            android:layout_toLeftOf="@id/imgv_posting_burger"
-            android:layout_width="60dp"
-            android:layout_height="40dp"/>
+            android:layout_toLeftOf="@id/imgv_burger"
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
         <ImageView
-            android:id="@+id/imgv_posting_burger"
+            android:id="@+id/imgv_burger"
             android:src="@drawable/icon_burger"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_alignParentRight="true"
-            android:layout_width="50dp"
-            android:layout_height="40dp"/>
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
     </RelativeLayout>
     <ImageView
         android:background="#CFCFCF"
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
-    <!-- 콘텐츠 -->
+    <!-- 글내용 -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/container"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <!-- 글정보 -->
             <LinearLayout
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/tv_posting_category"
+                    android:id="@+id/tv_category"
                     android:text="카테고리"
+                    android:textSize="14dp"
+                    android:textColor="#404040"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"/>
                 <TextView
-                    android:id="@+id/tv_posting_title"
+                    android:id="@+id/tv_title"
                     android:text="글제목"
+                    android:textSize="22dp"
+                    android:textColor="#000"
                     android:layout_marginVertical="10dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"/>
                 <RelativeLayout
                     android:gravity="center_vertical"
+                    android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:id="@+id/imgv_posting_profile"
+                        android:id="@+id/imgv_profile"
                         android:background="#123"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
                     <LinearLayout
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/imgv_posting_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/imgv_profile"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="40dp"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tv_posting_name"
-                            android:text="이웃"
-                            android:textSize="12dp"
+                            android:id="@+id/tv_name"
+                            android:text="사용자 닉네임"
+                            android:textSize="16dp"
+                            android:textColor="#303030"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
                             android:id="@+id/tv_posting_date"
                             android:text="1시간 전"
-                            android:textSize="10dp"
+                            android:textSize="14dp"
+                            android:textColor="#6E6E6E"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
                     <FrameLayout
-                        android:layout_toLeftOf="@+id/imgv_post_more"
-                        android:layout_width="60dp"
+                        android:layout_toLeftOf="@+id/imgv_more"
+                        android:layout_centerVertical="true"
+                        android:layout_width="70dp"
                         android:layout_height="30dp">
                         <TextView
-                            android:id="@+id/tv_posting_neighbor"
+                            android:id="@+id/tv_neighbor"
                             android:text="서로이웃"
+                            android:textSize="14dp"
+                            android:textColor="#000"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </FrameLayout>
                     <ImageView
-                        android:id="@+id/imgv_post_more"
-                        android:background="#123"
+                        android:id="@+id/imgv_more"
+                        android:src="@drawable/icon_more"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:layout_alignParentRight="true"
                         android:layout_width="10dp"
-                        android:layout_height="30dp"/>
+                        android:layout_height="20dp"/>
                 </RelativeLayout>
             </LinearLayout>
             <ImageView
@@ -134,28 +149,27 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <ImageView
-                    android:id="@+id/imgv_posting_photo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
+                    android:id="@+id/imgv_photo"
+                    android:src="@drawable/ic_launcher_background"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher_background" />
-                <TextView
-                    android:id="@+id/tv_posting_contents"
+                    android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용글내용" />
+                    android:layout_height="200dp" />
+                <TextView
+                    android:id="@+id/tv_contents"
+                    android:text="글내용"
+                    android:textSize="16dp"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
-
         </LinearLayout>
-
-
     </androidx.core.widget.NestedScrollView>
-
     <ImageView
         android:background="#CFCFCF"
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
+    <!-- 댓글창 -->
     <LinearLayout
         android:id="@+id/line_go_comment"
         android:gravity="center_vertical"
@@ -165,36 +179,36 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_posting_like"
-            android:background="#E91E63"
-            android:backgroundTint="#E91E63"
+        <ImageView
+            android:id="@+id/imgv_like"
+            android:src="@drawable/icon_like"
             android:layout_width="30dp"
             android:layout_height="30dp"/>
         <TextView
-            android:id="@+id/tv_posting_likes"
+            android:id="@+id/tv_likes"
             android:text="6"
             android:textSize="16dp"
-            android:layout_marginLeft="3dp"
+            android:textColor="#6E6E6E"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <LinearLayout
-            android:id="@+id/line_newsfeed_comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/icon_more2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="10dp"/>
             <ImageView
-                android:src="@drawable/ic_launcher_background"
-                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_comment"
+                android:layout_marginLeft="15dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
             <TextView
-                android:id="@+id/tv_posting_comments"
+                android:id="@+id/tv_comments"
                 android:text="6"
                 android:textSize="16dp"
-                android:layout_marginLeft="3dp"
+                android:textColor="#6E6E6E"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
