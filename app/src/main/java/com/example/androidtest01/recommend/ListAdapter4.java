@@ -14,16 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.posting.PostingActivity;
-import com.example.androidtest01.posting.PostingDTO;
+import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
 
 public class ListAdapter4 extends RecyclerView.Adapter<ListAdapter4.ViewHolder>{
     LayoutInflater inflater;
     Context context;
-    ArrayList<PostingDTO> list;
+    ArrayList<BlogDTO> list;
 
-    public ListAdapter4(LayoutInflater inflater, Context context, ArrayList<PostingDTO> list) {
+    public ListAdapter4(LayoutInflater inflater, Context context, ArrayList<BlogDTO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;
@@ -42,8 +42,8 @@ public class ListAdapter4 extends RecyclerView.Adapter<ListAdapter4.ViewHolder>{
         h.tv_title.setText(list.get(i).getTitle());
         h.tv_name.setText(list.get(i).getName());
         h.tv_date.setText(list.get(i).getDate());
-        h.tv_likes.setText(list.get(i).getLikes());
-        h.tv_comments.setText(list.get(i).getComments());
+        h.tv_likes.setText(list.get(i).getLikes()+"");
+        h.tv_comments.setText(list.get(i).getComments()+"");
         h.imgv_photo.setImageResource(list.get(i).getPhoto());
 
         final int idx = i;

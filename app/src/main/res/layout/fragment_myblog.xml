@@ -154,11 +154,36 @@
                 android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabl_myblog"
+            <LinearLayout
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imgv_chanege_photo"
+                    android:src="@drawable/icon_search"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:id="@+id/imgv_chanege_list"
+                    android:src="@drawable/icon_search"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:id="@+id/imgv_chanege_feed"
+                    android:src="@drawable/icon_search"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:id="@+id/imgv_chanege_video"
+                    android:src="@drawable/icon_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
         </RelativeLayout>
 
 

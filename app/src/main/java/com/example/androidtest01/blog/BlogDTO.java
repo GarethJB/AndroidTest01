@@ -1,13 +1,12 @@
-package com.example.androidtest01.posting;
+package com.example.androidtest01.blog;
 
 import java.io.Serializable;
-import java.util.Date;
 
-public class PostingDTO implements Serializable {
+public class BlogDTO implements Serializable {
     private String name, blogname, category, title, date, contents, comment;
     private int profile, photo, neighbor, likes, comments;
 
-    public PostingDTO(String name, String blogname, String category, String title, String date, String contents, String comment, int profile, int photo, int neighbor, int likes, int comments) {
+    public BlogDTO(String name, String blogname, String category, String title, String date, String contents, String comment, int profile, int photo, int neighbor, int likes, int comments) {
         this.name = name;
         this.blogname = blogname;
         this.category = category;

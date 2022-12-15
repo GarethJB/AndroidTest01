@@ -13,18 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
+import com.example.androidtest01.comment.CommentActivity;
 import com.example.androidtest01.posting.PostingActivity;
-import com.example.androidtest01.posting.PostingDTO;
+import com.example.androidtest01.blog.BlogDTO;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
     LayoutInflater inflater;
     Context context;
-    ArrayList<PostingDTO> list;
+    ArrayList<BlogDTO> list;
 
-    public FeedAdapter(LayoutInflater inflater, Context context, ArrayList<PostingDTO> list) {
+    public FeedAdapter(LayoutInflater inflater, Context context, ArrayList<BlogDTO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;
@@ -56,6 +56,14 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
                 context.startActivity(intent);
             }
         });
+        h.line_go_comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CommentActivity.class);
+                intent.putExtra("dto", list.get(idx));// 오류 발생 원인 : ?
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -74,12 +82,13 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout line_newsfeed_content;
+        LinearLayout line_newsfeed_content, line_go_comment;
         ImageView imgv_feed_profile, imgv_feed_photo;
         TextView tv_feed_name, tv_feed_date, tv_feed_title, tv_feed_contents;
         public ViewHolder(@NonNull View v) {
             super(v);
             line_newsfeed_content = v.findViewById(R.id.line_newsfeed_content);
+            line_go_comment = v.findViewById(R.id.line_go_comment);
             imgv_feed_profile = v.findViewById(R.id.imgv_feed_profile);
             imgv_feed_photo = v.findViewById(R.id.imgv_feed_photo);
             tv_feed_name = v.findViewById(R.id.tv_feed_name);

@@ -157,6 +157,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
     <LinearLayout
+        android:id="@+id/line_go_comment"
         android:gravity="center_vertical"
         android:paddingHorizontal="10dp"
         android:layout_marginTop="5dp"

@@ -12,16 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.posting.PostingActivity;
-import com.example.androidtest01.posting.PostingDTO;
+import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
 
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
     LayoutInflater inflater;
     Context context;
-    ArrayList<PostingDTO> list;
+    ArrayList<BlogDTO> list;
 
-    public PhotoAdapter(LayoutInflater inflater, Context context, ArrayList<PostingDTO> list) {
+    public PhotoAdapter(LayoutInflater inflater, Context context, ArrayList<BlogDTO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;
@@ -38,8 +38,8 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         h.imgv_photo1.setImageResource(list.get(i).getPhoto());
-        h.imgv_photo2.setImageResource(list.get(i*2).getPhoto());
-        h.imgv_photo3.setImageResource(list.get(i*3).getPhoto());
+        h.imgv_photo2.setImageResource(list.get(i).getPhoto());
+        h.imgv_photo3.setImageResource(list.get(i).getPhoto());
 
         final int idx = i;
         h.imgv_photo1.setOnClickListener(new View.OnClickListener() {

@@ -14,16 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.posting.PostingActivity;
-import com.example.androidtest01.posting.PostingDTO;
+import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
     LayoutInflater inflater;
     Context context;
-    ArrayList<PostingDTO> list;
+    ArrayList<BlogDTO> list;
 
-    public ListAdapter(LayoutInflater inflater, Context context, ArrayList<PostingDTO> list) {
+    public ListAdapter(LayoutInflater inflater, Context context, ArrayList<BlogDTO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;
@@ -40,11 +40,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         h.tv_date.setText(list.get(i).getDate());
-        h.tv_neighbor.setText(list.get(i).getNeighbor());
+        h.tv_neighbor.setText(list.get(i).getNeighbor()+"");
         h.tv_title.setText(list.get(i).getTitle());
         h.tv_contents.setText(list.get(i).getContents());
-        h.tv_likes.setText(list.get(i).getLikes());
-        h.tv_comments.setText(list.get(i).getComments());
+        h.tv_likes.setText(list.get(i).getLikes()+"");
+        h.tv_comments.setText(list.get(i).getComments()+"");
         h.imgv_photo.setImageResource(list.get(i).getPhoto());
 
         final int idx = i;
