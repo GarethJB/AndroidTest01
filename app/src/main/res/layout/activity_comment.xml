@@ -13,36 +13,32 @@
 
         <!-- top navigation -->
         <RelativeLayout
-            android:gravity="center_vertical"
             android:paddingHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
             <ImageView
-                android:id="@+id/imgv_comment_back"
-                android:src="@drawable/icon_search"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:id="@+id/imgv_back"
+                android:src="@drawable/icon_back"
+                android:layout_centerVertical="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
             <TextView
-                android:id="@+id/tv_blogname"
-                android:text="블로그제목"
-                android:textSize="30dp"
+                android:text="글 댓글"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"/>
-            <ImageView
-                android:id="@+id/imgv_posting_search"
-                android:src="@drawable/icon_search"
-                android:layout_marginLeft="10dp"
-                android:layout_toLeftOf="@id/tv_go_posting"
-                android:layout_width="60dp"
-                android:layout_height="40dp"/>
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/tv_go_posting"
                 android:text="글보기"
-                android:textSize="15dp"
+                android:textSize="16dp"
+                android:textColor="#A5A5A5"
                 android:gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:layout_width="60dp"
                 android:layout_height="40dp"/>
@@ -59,120 +55,135 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- 댓글정보 -->
                 <LinearLayout
+                    android:padding="10dp"
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- 댓글정보 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/imgv_profile"
+                                android:background="#123"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"/>
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:text="이웃"
+                                    android:textSize="20dp"
+                                    android:textColor="#000"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/imgv_profile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <ImageView
+                                android:id="@+id/imgv_post_more"
+                                android:src="@drawable/icon_more"
+                                android:layout_marginLeft="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="10dp"
+                                android:layout_height="20dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:text="댓글1"
+                        android:textSize="20dp"
+                        android:textColor="#323232"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:text="2022. 12. 5."
+                        android:textSize="14dp"
+                        android:textColor="#959595"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                     <RelativeLayout
-                        android:gravity="center_vertical"
+                        android:layout_marginVertical="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/imgv_profile"
-                            android:background="#123"
-                            android:layout_width="30dp"
+                        <TextView
+                            android:text="답글"
+                            android:textSize="12dp"
+                            android:textColor="#323232"
+                            android:gravity="center"
+                            android:layout_width="60dp"
                             android:layout_height="30dp"/>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/btn_like"
+                                android:src="@drawable/icon_like"
+                                android:scaleType="fitXY"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"/>
                             <TextView
-                                android:id="@+id/tv_name"
-                                android:text="이웃"
-                                android:textSize="20dp"
+                                android:id="@+id/tv_likes"
+                                android:text="0"
+                                android:textSize="18dp"
+                                android:textColor="#000"
+                                android:gravity="center"
                                 android:layout_marginLeft="5dp"
-                                android:layout_toRightOf="@+id/imgv_profile"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
-                        <ImageView
-                            android:id="@+id/imgv_post_more"
-                            android:background="#123"
-                            android:layout_marginLeft="20dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_width="10dp"
-                            android:layout_height="30dp"/>
+                        </LinearLayout>
                     </RelativeLayout>
                 </LinearLayout>
-                <TextView
-                    android:id="@+id/tv_comment"
-                    android:text="댓글1"
-                    android:textSize="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tv_date"
-                    android:text="2022. 12. 5."
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <RelativeLayout
-                    android:layout_marginVertical="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:text="답글"
-                        android:gravity="center"
-                        android:layout_width="60dp"
-                        android:layout_height="30dp"/>
-                    <LinearLayout
-                        android:gravity="center"
-                        android:layout_alignParentRight="true"
-                        android:layout_width="60dp"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-                        <ImageButton
-                            android:id="@+id/btn_like"
-                            android:src="@drawable/ic_launcher_background"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"/>
-                        <TextView
-                            android:id="@+id/tv_likes"
-                            android:text="0"
-                            android:gravity="center"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"/>
-                    </LinearLayout>
-                </RelativeLayout>
                 <ImageView
                     android:background="#CFCFCF"
+                    android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
     <!-- 댓글입력창 -->
+    <ImageView
+        android:background="#CFCFCF"
+        android:layout_above="@+id/line_comment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
     <LinearLayout
-        android:padding="0dp"
+        android:id="@+id/line_comment"
         android:layout_alignParentBottom="true"
+        android:gravity="top"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="vertical">
-        <ImageView
-            android:background="#CFCFCF"
-            android:layout_margin="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-        <LinearLayout
-            android:padding="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-            <EditText
-                android:hint="댓글을 입력해주세요"
-                android:layout_weight="8.5"
-                android:layout_width="0dp"
-                android:layout_height="40dp"/>
-            <Button
-                android:text="등록"
-                android:background="#9A9A9A"
-                android:backgroundTint="#00000000"
-                android:layout_marginVertical="0dp"
-                android:layout_weight="1.5"
-                android:layout_width="0dp"
-                android:layout_height="40dp"/>
-        </LinearLayout>
+        android:orientation="horizontal">
+        <EditText
+            android:hint="댓글을 입력해주세요"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="등록"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="#757575"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
 </RelativeLayout>

@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:id="@+id/imgv_profile"
-                        android:background="#123"
+                        android:src="@drawable/profile_img1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"/>
                     <LinearLayout

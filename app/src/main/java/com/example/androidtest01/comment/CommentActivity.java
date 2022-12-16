@@ -18,23 +18,22 @@ import java.util.ArrayList;
 
 public class CommentActivity extends AppCompatActivity {
     ArrayList<BlogDTO> list = new ArrayList<>();
-    ImageView imgv_profile, imgv_comment_back;
-    TextView tv_go_posting, tv_blogname, tv_name, tv_comment, tv_date;
+    ImageView imgv_profile, imgv_back;
+    TextView tv_go_posting, tv_name, tv_comment, tv_date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
 
-        imgv_comment_back = findViewById(R.id.imgv_comment_back);
+        imgv_back = findViewById(R.id.imgv_back);
         tv_go_posting = findViewById(R.id.tv_go_posting);
         imgv_profile = findViewById(R.id.imgv_profile);
-        tv_blogname = findViewById(R.id.tv_blogname);
         tv_name = findViewById(R.id.tv_name);
         tv_comment = findViewById(R.id.tv_comment);
         tv_date = findViewById(R.id.tv_date);
 
-        imgv_comment_back.setOnClickListener(new View.OnClickListener() {
+        imgv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -45,7 +44,6 @@ public class CommentActivity extends AppCompatActivity {
         BlogDTO dto = (BlogDTO) intent.getSerializableExtra("dto");
 
         imgv_profile.setImageResource(dto.getProfile());
-        tv_blogname.setText(dto.getBlogname());
         tv_name.setText(dto.getName());
         tv_comment.setText(dto.getComment());
         tv_date.setText(dto.getDate());

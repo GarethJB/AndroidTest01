@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/imgv_photo"
         android:background="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <RelativeLayout

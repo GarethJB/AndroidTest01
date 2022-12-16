@@ -9,15 +9,15 @@ import android.widget.TextView;
 import com.example.androidtest01.R;
 
 public class WritingActivity extends AppCompatActivity {
-    TextView tv_writing_back;
+    TextView tv_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing);
 
-        tv_writing_back = findViewById(R.id.tv_writing_back);
+        tv_back = findViewById(R.id.tv_back);
 
-        tv_writing_back.setOnClickListener(new View.OnClickListener() {
+        tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

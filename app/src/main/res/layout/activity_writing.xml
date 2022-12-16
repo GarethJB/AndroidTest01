@@ -8,11 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_writing_back"
+            android:id="@+id/tv_back"
             android:text="취소"
             android:textSize="20dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:textColor="#BABABA"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <LinearLayout
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
@@ -20,18 +22,32 @@
             android:orientation="horizontal">
             <TextView
                 android:text="플레이리스트"
-                android:textSize="20dp"
+                android:textSize="18dp"
+                android:textColor="#000"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:text="· 전체"
+                android:text="·"
                 android:textSize="20dp"
+                android:textColor="#8E8E8E"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="전체"
+                android:textSize="18dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <TextView
             android:text="등록"
             android:textSize="20dp"
+            android:textColor="#BABABA"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -43,6 +59,8 @@
     <EditText
         android:hint="제목"
         android:textSize="30dp"
+        android:textColor="#000"
+        android:textColorHint="#CFCFCF"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:layout_marginHorizontal="10dp"
@@ -55,22 +73,27 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/icon_gps"
             android:layout_width="20dp"
             android:layout_height="20dp"/>
         <TextView
             android:text="위치추가"
+            android:textSize="14dp"
+            android:textColor="#878787"
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
+        android:paddingHorizontal="10dp"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <EditText
             android:hint="본문에 #을 이용해 태그를 입력해보세요! (최대 30개)"
-            android:padding="10dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:textColorHint="#CFCFCF"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -118,25 +141,30 @@
             android:layout_height="30dp"/>
         <TextView
             android:text="저장"
-            android:textSize="20dp"
-            android:layout_marginRight="30dp"
+            android:textSize="16dp"
+            android:textColor="#878787"
+            android:layout_marginRight="40dp"
             android:layout_toLeftOf="@id/tv_writing_cnt"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageView
-            android:background="#000"
-            android:layout_marginRight="15dp"
+            android:background="#878787"
+            android:layout_marginRight="20dp"
             android:layout_toLeftOf="@id/tv_writing_cnt"
+            android:layout_centerVertical="true"
             android:layout_width="1dp"
             android:layout_height="20dp"/>
         <TextView
             android:id="@+id/tv_writing_cnt"
             android:text="1"
-            android:textSize="20dp"
+            android:textSize="16dp"
+            android:textColor="#878787"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
     </RelativeLayout>
 
 </LinearLayout>

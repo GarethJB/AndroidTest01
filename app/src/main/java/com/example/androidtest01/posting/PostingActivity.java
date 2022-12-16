@@ -57,10 +57,14 @@ public class PostingActivity extends AppCompatActivity {
         tv_title.setText(dto.getTitle());
         tv_name.setText(dto.getName());
         tv_posting_date.setText(dto.getDate());
-        tv_neighbor.setText(dto.getNeighbor()+"");
         tv_contents.setText(dto.getContents());
         imgv_profile.setImageResource(dto.getProfile());
         imgv_photo.setImageResource(dto.getPhoto());
+        if(dto.getNeighbor() == 1) {
+            tv_neighbor.setText("서로이웃");
+        }else {
+            tv_neighbor.setText("이웃");
+        }
 
         line_go_comment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +84,7 @@ public class PostingActivity extends AppCompatActivity {
                     tv_likes.setText((dto.getLikes()+1)+"");
                 }else if(cnt % 2 != 1) {
                     imgv_like.setImageResource(R.drawable.icon_like);
-                    tv_likes.setText((dto.getLikes()-1)+"");
+                    tv_likes.setText(dto.getLikes()+"");
                 }
             }
         });
