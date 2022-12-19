@@ -31,14 +31,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
         </LinearLayout>
-        <LinearLayout
+        <!-- 공감 및 댓글 -->
+        <RelativeLayout
+            android:id="@+id/line_go_comment"
             android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal">
-            <Button
-                android:background="#E91E63"
-                android:backgroundTint="#E91E63"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/imgv_like"
+                android:src="@drawable/icon_like"
+                android:layout_centerVertical="true"
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>
             <TextView
@@ -46,11 +50,16 @@
                 android:text="6"
                 android:textSize="12dp"
                 android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/imgv_like"
+                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
-                android:src="@drawable/ic_launcher_background"
+                android:id="@+id/imgv_comment"
+                android:src="@drawable/icon_comment"
                 android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_likes"
+                android:layout_centerVertical="true"
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>
             <TextView
@@ -58,9 +67,11 @@
                 android:text="6"
                 android:textSize="12dp"
                 android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/imgv_comment"
+                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
     <ImageView
         android:id="@+id/imgv_photo"

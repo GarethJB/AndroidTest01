@@ -10,10 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
-import com.example.androidtest01.common.CommonMethod;
-import com.example.androidtest01.common.BlogItem;
 import com.example.androidtest01.blog.BlogDTO;
-import com.google.android.material.tabs.TabLayout;
+import com.example.androidtest01.common.BlogItem;
+import com.example.androidtest01.common.CommonMethod;
 
 import java.util.ArrayList;
 
@@ -40,66 +39,84 @@ public class MyblogFragment extends Fragment {
 
         list = BlogItem.getPostingItem(10);
 
-        imgv_chanege_list.setImageResource(R.drawable.icon_burger);
+        imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+
+
+
+        PhotoAdapter adapter_photo = new PhotoAdapter(inflater, getContext(), list);
+        recv_myblog_photo.setAdapter(adapter_photo);
+        recv_myblog_photo.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
+
+        ListAdapter adapter_list = new ListAdapter(inflater, getContext(), list);
+        recv_myblog_list.setAdapter(adapter_list);
+        recv_myblog_list.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
+
+        FeedAdapter adapter_feed = new FeedAdapter(inflater, getContext(), list);
+        recv_myblog_feed.setAdapter(adapter_feed);
+        recv_myblog_feed.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
+
+        VideoAdapter adapter_video = new VideoAdapter(inflater);
+        recv_myblog_video.setAdapter(adapter_video);
+        recv_myblog_video.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
 
         recv_myblog_photo.setVisibility(View.GONE);
         recv_myblog_list.setVisibility(View.VISIBLE);
         recv_myblog_feed.setVisibility(View.GONE);
         recv_myblog_video.setVisibility(View.GONE);
-        ListAdapter adapter = new ListAdapter(inflater, getContext(), list);
-        recv_myblog_list.setAdapter(adapter);
-        recv_myblog_list.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
 
         imgv_chanege_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgv_chanege_photo.setImageResource(R.drawable.icon_burger);
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo_fill);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video);
                 recv_myblog_photo.setVisibility(View.VISIBLE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.GONE);
                 recv_myblog_video.setVisibility(View.GONE);
-                PhotoAdapter adapter = new PhotoAdapter(inflater, getContext(), list);
-                recv_myblog_photo.setAdapter(adapter);
-                recv_myblog_photo.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
             }
         });
 
         imgv_chanege_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.VISIBLE);
                 recv_myblog_feed.setVisibility(View.GONE);
                 recv_myblog_video.setVisibility(View.GONE);
-                ListAdapter adapter = new ListAdapter(inflater, getContext(), list);
-                recv_myblog_list.setAdapter(adapter);
-                recv_myblog_list.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
             }
         });
 
         imgv_chanege_feed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed_fill);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.VISIBLE);
                 recv_myblog_video.setVisibility(View.GONE);
-                FeedAdapter adapter = new FeedAdapter(inflater, getContext(), list);
-                recv_myblog_feed.setAdapter(adapter);
-                recv_myblog_feed.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
             }
         });
 
         imgv_chanege_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video_fill);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.GONE);
                 recv_myblog_video.setVisibility(View.VISIBLE);
-                VideoAdapter adapter = new VideoAdapter(inflater);
-                recv_myblog_video.setAdapter(adapter);
-                recv_myblog_video.setLayoutManager(CommonMethod.getManagerVertical(getContext()));
             }
         });
 

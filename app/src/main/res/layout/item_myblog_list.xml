@@ -47,9 +47,9 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:orientation="horizontal">
-            <Button
-                android:background="#E91E63"
-                android:backgroundTint="#E91E63"
+            <ImageView
+                android:id="@+id/imgv_like"
+                android:src="@drawable/icon_like"
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/icon_comment"
                 android:layout_marginLeft="10dp"
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>

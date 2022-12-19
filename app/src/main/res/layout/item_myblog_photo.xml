@@ -7,19 +7,19 @@
         android:id="@+id/imgv_photo1"
         android:src="@drawable/ic_launcher_background"
         android:layout_toLeftOf="@id/imgv_photo2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
     <ImageView
         android:id="@+id/imgv_photo2"
         android:src="@drawable/ic_launcher_background"
         android:layout_marginHorizontal="12dp"
         android:layout_centerInParent="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
     <ImageView
         android:id="@+id/imgv_photo3"
         android:src="@drawable/ic_launcher_background"
         android:layout_toRightOf="@id/imgv_photo2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
 </RelativeLayout>

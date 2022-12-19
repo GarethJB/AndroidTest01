@@ -23,6 +23,7 @@
             android:background="#EAEAEA"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/tv_notice_nt"
+            android:layout_centerVertical="true"
             android:layout_width="2dp"
             android:layout_height="16dp"/>
         <TextView
