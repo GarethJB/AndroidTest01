@@ -51,23 +51,22 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recv_rcm_list1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    android:layout_height="wrap_content" />
 
                 <!-- 추천 모먼트 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:background="#EAEAEA"
-                    android:gravity="center_vertical"
                     android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:text="추천 모먼트"
                         android:textColor="#535353"
-                        android:textSize="16dp"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -75,15 +74,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         android:text="더보기"
                         android:textColor="#9E9E9E"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recv_rcm_moment"
                     android:layout_width="wrap_content"
-                    android:layout_height="230dp"
+                    android:layout_height="300dp"
                     android:background="#EAEAEA"
                     android:padding="10dp" />
 
@@ -91,8 +91,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recv_rcm_list2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    android:layout_height="wrap_content" />
                 <!-- 오늘의 동영상 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -121,8 +120,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recv_rcm_list3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -161,7 +159,6 @@
             <!-- 추천리스트4 -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_rcm_list4"
-                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

@@ -19,28 +19,31 @@
             <RelativeLayout
                 android:padding="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp">
+                android:layout_height="40dp">
                 <TextView
                     android:text="모먼트"
-                    android:textSize="20dp"
+                    android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="#535353"
                     android:padding="0dp"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/tv_newsfeed_m1"
                     android:text="만들기"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:layout_marginRight="10dp"
                     android:layout_toLeftOf="@id/tv_newsfeed_m2"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/tv_newsfeed_m2"
                     android:text="모먼트홈"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
@@ -48,7 +51,7 @@
                 android:id="@+id/recv_newsfeed_moment"
                 android:padding="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="230dp"/>
+                android:layout_height="250dp"/>
 
             <ImageView
                 android:background="#EAEAEA"

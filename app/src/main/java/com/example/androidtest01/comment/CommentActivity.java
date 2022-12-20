@@ -45,7 +45,6 @@ public class CommentActivity extends AppCompatActivity {
 
         imgv_profile.setImageResource(dto.getProfile());
         tv_name.setText(dto.getName());
-        tv_comment.setText(dto.getComment());
         tv_date.setText(dto.getDate());
 
         tv_go_posting.setOnClickListener(new View.OnClickListener() {

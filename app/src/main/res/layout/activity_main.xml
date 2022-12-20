@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/tv_top"
             android:text="이웃새글"
-            android:textSize="24dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#000"
             android:layout_width="wrap_content"
@@ -27,15 +27,15 @@
             android:src="@drawable/icon_search"
             android:layout_marginLeft="10dp"
             android:layout_toLeftOf="@id/imgv_burger"
-            android:layout_width="60dp"
-            android:layout_height="40dp"/>
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
         <ImageView
             android:id="@+id/imgv_burger"
             android:src="@drawable/icon_burger"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_alignParentRight="true"
-            android:layout_width="50dp"
-            android:layout_height="40dp"/>
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
     </RelativeLayout>
 
     <FrameLayout

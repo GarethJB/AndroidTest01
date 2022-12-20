@@ -14,9 +14,8 @@ import com.example.androidtest01.blog.BlogDTO;
 
 public class MomentActivity extends AppCompatActivity {
     ImageView imgv_photo, imgv_profile, imgv_moment_back;
-    TextView tv_name, tv_date, tv_contents, tv_likes, tv_comments;
+    TextView tv_name, tv_date, tv_contents;
 
- //   ArrayList<PostingDTO> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +27,6 @@ public class MomentActivity extends AppCompatActivity {
         tv_name = findViewById(R.id.tv_name);
         tv_date = findViewById(R.id.tv_date);
         tv_contents = findViewById(R.id.tv_contents);
-        tv_likes = findViewById(R.id.tv_likes);
-        tv_comments = findViewById(R.id.tv_comments);
 
         imgv_moment_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,14 +43,12 @@ public class MomentActivity extends AppCompatActivity {
         tv_name.setText(dto.getName());
         tv_date.setText(dto.getDate());
         tv_contents.setText(dto.getContents());
-        tv_likes.setText(dto.getLikes()+"");
-        tv_comments.setText(dto.getComments()+"");
 
         imgv_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MomentActivity.this, PostingActivity.class);
-                intent.putExtra("dto", dto);// 오류 발생 원인 : ?
+                intent.putExtra("dto", dto);
                 startActivity(intent);
             }
         });

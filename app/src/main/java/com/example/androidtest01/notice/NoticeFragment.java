@@ -26,7 +26,8 @@ public class NoticeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_notice, container, false);
 
-        list = BlogItem.getPostingItem(10);
+        BlogItem item = new BlogItem();
+        list = item.getPostingItem();
 
         recv_notice = v.findViewById(R.id.recv_notice);
         CommentAdapter adapter = new CommentAdapter(inflater, getContext(), list);

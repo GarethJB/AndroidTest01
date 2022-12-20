@@ -41,7 +41,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         h.tv_title.setText(list.get(i).getTitle());
         h.tv_name.setText(list.get(i).getName());
-        h.tv_comment.setText(list.get(i).getComment());
         h.tv_date.setText(list.get(i).getDate());
 
         final int idx = i;

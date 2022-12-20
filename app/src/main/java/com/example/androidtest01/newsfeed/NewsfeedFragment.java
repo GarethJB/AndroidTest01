@@ -29,7 +29,8 @@ public class NewsfeedFragment extends Fragment {
         recv_newsfeed_moment = v.findViewById(R.id.recv_newsfeed_moment);
         recv_newsfeed_feed = v.findViewById(R.id.recv_newsfeed_feed);
 
-        list = BlogItem.getPostingItem(20);
+        BlogItem item = new BlogItem();
+        list = item.getPostingItem();
 
         MomentAdapter adapter_moment = new MomentAdapter(inflater, getContext(), list);
         FeedAdapter adapter_feed = new FeedAdapter(inflater, getContext(), list);

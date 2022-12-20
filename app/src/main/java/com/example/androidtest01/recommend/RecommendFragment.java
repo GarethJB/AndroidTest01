@@ -26,7 +26,8 @@ public class RecommendFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_recommend, container, false);
 
-        list = BlogItem.getPostingItem(19);
+        BlogItem item = new BlogItem();
+        list = item.getPostingItem();
 
         recv_rcm_list1 = v.findViewById(R.id.recv_rcm_list1);
         recv_rcm_moment = v.findViewById(R.id.recv_rcm_moment);

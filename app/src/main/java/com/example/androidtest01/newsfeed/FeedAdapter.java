@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -56,7 +57,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
                 context.startActivity(intent);
             }
         });
-        h.line_go_comment.setOnClickListener(new View.OnClickListener() {
+        h.rel_go_comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, CommentActivity.class);
@@ -82,13 +83,14 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout line_newsfeed_content, line_go_comment;
+        LinearLayout line_newsfeed_content;
+        RelativeLayout rel_go_comment;
         ImageView imgv_feed_profile, imgv_feed_photo;
         TextView tv_feed_name, tv_feed_date, tv_feed_title, tv_feed_contents;
         public ViewHolder(@NonNull View v) {
             super(v);
             line_newsfeed_content = v.findViewById(R.id.line_newsfeed_content);
-            line_go_comment = v.findViewById(R.id.line_go_comment);
+            rel_go_comment = v.findViewById(R.id.rel_go_comment);
             imgv_feed_profile = v.findViewById(R.id.imgv_feed_profile);
             imgv_feed_photo = v.findViewById(R.id.imgv_feed_photo);
             tv_feed_name = v.findViewById(R.id.tv_feed_name);

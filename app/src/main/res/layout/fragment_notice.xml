@@ -45,7 +45,6 @@
     <!-- 알림리스트 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recv_notice"
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
