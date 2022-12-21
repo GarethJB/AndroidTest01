@@ -6,124 +6,124 @@
     tools:context=".myblog.MyblogFragment"
     android:orientation="vertical">
     <RelativeLayout
-        android:background="@drawable/ic_launcher_background"
         android:id="@+id/rel_myblog"
-        android:padding="20dp"
-        android:layout_weight="5"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/photo1"
+        android:padding="20dp">
         <!-- 프로필 그룹 -->
         <TextView
             android:id="@+id/tv_myblog_today"
-            android:text="오늘 2"
-            android:textSize="12dp"
-            android:textColor="#fff"
-            android:layout_above="@id/tv_myblog_blogname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_myblog_blogname"
+            android:text="오늘 2"
+            android:textColor="#fff"
+            android:textSize="12dp" />
         <TextView
             android:id="@+id/tv_myblog_total"
-            android:text="전체 632"
-            android:textSize="12dp"
-            android:layout_marginLeft="8dp"
-            android:textColor="#fff"
-            android:layout_toRightOf="@id/tv_myblog_today"
-            android:layout_above="@id/tv_myblog_blogname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_myblog_blogname"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_myblog_today"
+            android:text="전체 632"
+            android:textColor="#fff"
+            android:textSize="12dp" />
         <TextView
             android:id="@+id/tv_myblog_blogname"
-            android:text="JUBIN_Blog"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:layout_marginBottom="16dp"
-            android:layout_above="@id/imgv_myblog_profile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imgv_myblog_profile"
+            android:layout_marginBottom="16dp"
+            android:text="JUBIN_Blog"
+            android:textColor="#fff"
+            android:textSize="24dp"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/imgv_myblog_profile"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_marginBottom="16dp"
-            android:layout_above="@id/btn_myblog_homeset"
             android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:layout_above="@id/btn_myblog_homeset"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/profile_img1" />
         <LinearLayout
-            android:gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/btn_myblog_homeset"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="16dp"
             android:layout_toRightOf="@id/imgv_myblog_profile"
-            android:layout_above="@id/btn_myblog_homeset"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:gravity="center_vertical"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tv_myblog_name"
-                android:text="주빈"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#fff"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="주빈"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/tv_myblog_neighbor"
-                android:text="9명 이웃"
-                android:textStyle="bold"
-                android:textSize="10dp"
-                android:textColor="#fff"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="9명 이웃"
+                android:textColor="#fff"
+                android:textSize="10dp"
+                android:textStyle="bold" />
         </LinearLayout>
         <!-- 버튼 그룹 -->
         <ImageView
             android:id="@+id/btn_myblog_homeset"
-            android:src="@drawable/icon_setting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentBottom="true"
-            android:layout_width="26dp"
-            android:layout_height="26dp"/>
+            android:src="@drawable/icon_setting" />
         <TextView
             android:id="@+id/tv_home"
-            android:text="홈편집"
-            android:textSize="20dp"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:layout_toRightOf="@+id/btn_myblog_homeset"
-            android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
-            android:layout_height="26dp"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btn_myblog_homeset"
+            android:gravity="center_vertical"
+            android:text="홈편집"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/imgv_graph"
-            android:src="@drawable/icon_graph"
-            android:layout_marginLeft="30dp"
-            android:layout_alignParentBottom="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentRight="true"
-            android:layout_width="26dp"
-            android:layout_height="26dp"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/icon_graph" />
         <ImageView
             android:id="@+id/imgv_neighbor"
-            android:src="@drawable/icon_neighbor"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="30dp"
             android:layout_toLeftOf="@+id/imgv_graph"
-            android:layout_alignParentBottom="true"
-            android:layout_width="26dp"
-            android:layout_height="26dp"/>
+            android:src="@drawable/icon_neighbor" />
         <ImageView
             android:id="@+id/imgv_thanks"
-            android:src="@drawable/icon_thanks"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="30dp"
             android:layout_toLeftOf="@+id/imgv_neighbor"
-            android:layout_alignParentBottom="true"
-            android:layout_width="26dp"
-            android:layout_height="26dp"/>
+            android:src="@drawable/icon_thanks" />
         <ImageView
             android:id="@+id/imgv_list"
-           android:src="@drawable/icon_golist"
-            android:layout_toLeftOf="@+id/imgv_thanks"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentBottom="true"
-            android:layout_width="26dp"
-            android:layout_height="26dp"/>
+            android:layout_toLeftOf="@+id/imgv_thanks"
+            android:src="@drawable/icon_category" />
     </RelativeLayout>
     <LinearLayout
         android:layout_weight="5"
@@ -152,25 +152,25 @@
                     android:id="@+id/imgv_chanege_photo"
                     android:src="@drawable/icon_photo"
                     android:layout_marginRight="10dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_list"
                     android:src="@drawable/icon_list"
                     android:layout_marginRight="10dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_feed"
                     android:src="@drawable/icon_feed"
                     android:layout_marginRight="10dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_video"
                     android:src="@drawable/icon_video"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
             </LinearLayout>
         </RelativeLayout>
         <!-- 글목록 -->
@@ -181,7 +181,6 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_myblog_photo"
                 android:visibility="gone"
-                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <androidx.recyclerview.widget.RecyclerView

@@ -3,10 +3,12 @@ package com.example.androidtest01.blog;
 import java.io.Serializable;
 
 public class BlogDTO implements Serializable {
+    private int id;
     private String name, blogname, category, title, date, contents;
     private int profile, photo, neighbor, likes, comments;
 
-    public BlogDTO(String name, String blogname, String category, String title, String date, String contents, int profile, int photo, int neighbor, int likes, int comments) {
+    public BlogDTO(int id, String name, String blogname, String category, String title, String date, String contents, int profile, int photo, int neighbor, int likes, int comments) {
+        this.id = id;
         this.name = name;
         this.blogname = blogname;
         this.category = category;
@@ -18,6 +20,14 @@ public class BlogDTO implements Serializable {
         this.neighbor = neighbor;
         this.likes = likes;
         this.comments = comments;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
