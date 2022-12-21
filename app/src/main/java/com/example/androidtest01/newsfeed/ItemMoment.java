@@ -1,12 +1,13 @@
-package com.example.androidtest01.common;
+package com.example.androidtest01.newsfeed;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
 
-public class BlogItem {
-        public ArrayList<BlogDTO> getPostingItem() {
+public class ItemMoment {
+
+    public ArrayList<BlogDTO> getItem() {
         ArrayList<BlogDTO> list = new ArrayList<>();
 
         list.add( new BlogDTO(1,"츄리부인", "츄리 Blog", "일상", "오늘의 일기", "2022. 11. 9."
@@ -42,5 +43,6 @@ public class BlogItem {
 
         return list;
 
-        }
+    }
+
 }

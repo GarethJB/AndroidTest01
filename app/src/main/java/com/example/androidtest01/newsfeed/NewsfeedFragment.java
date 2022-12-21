@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.common.CommonMethod;
-import com.example.androidtest01.common.BlogItem;
 import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
@@ -29,7 +28,7 @@ public class NewsfeedFragment extends Fragment {
         recv_newsfeed_moment = v.findViewById(R.id.recv_newsfeed_moment);
         recv_newsfeed_feed = v.findViewById(R.id.recv_newsfeed_feed);
 
-        BlogItem item = new BlogItem();
+        ItemFeed item = new ItemFeed();
         list = item.getPostingItem();
 
         MomentAdapter adapter_moment = new MomentAdapter(inflater, getContext(), list);

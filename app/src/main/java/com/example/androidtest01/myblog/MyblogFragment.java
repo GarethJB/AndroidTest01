@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
-import com.example.androidtest01.common.BlogItem;
+import com.example.androidtest01.newsfeed.ItemFeed;
 import com.example.androidtest01.common.CommonMethod;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class MyblogFragment extends Fragment {
         recv_myblog_feed = v.findViewById(R.id.recv_myblog_feed);
         recv_myblog_video = v.findViewById(R.id.recv_myblog_video);
 
-        BlogItem item = new BlogItem();
+        ItemFeed item = new ItemFeed();
         list = item.getPostingItem();
 
         imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);

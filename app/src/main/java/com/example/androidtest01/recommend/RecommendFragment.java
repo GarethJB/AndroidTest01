@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.common.CommonMethod;
-import com.example.androidtest01.common.BlogItem;
+import com.example.androidtest01.newsfeed.ItemFeed;
 import com.example.androidtest01.blog.BlogDTO;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class RecommendFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_recommend, container, false);
 
-        BlogItem item = new BlogItem();
+        ItemFeed item = new ItemFeed();
         list = item.getPostingItem();
 
         recv_rcm_list1 = v.findViewById(R.id.recv_rcm_list1);
