@@ -38,7 +38,9 @@ public class MomentAdapter extends RecyclerView.Adapter<MomentAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.imgv_photo.setImageResource(list.get(i).getPhoto());
+      //  h.imgv_photo.setImageResource(list.get(i).getPhoto());
+       // h.imgv_photo.setBackgroundResource(list.get(i).getPhoto());
+
         h.imgv_profile.setImageResource(list.get(i).getProfile());
 
         final int idx = i;
@@ -46,7 +48,7 @@ public class MomentAdapter extends RecyclerView.Adapter<MomentAdapter.ViewHolder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MomentActivity.class);
-                intent.putExtra("dto", list.get(idx));// 오류 발생 원인 : ?
+                intent.putExtra("dto", list.get(idx));
                 context.startActivity(intent);
             }
         });

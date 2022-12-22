@@ -70,7 +70,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 6;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

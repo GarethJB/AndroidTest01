@@ -50,7 +50,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PostingActivity.class);
-                intent.putExtra("dto", list.get(idx));// 오류 발생 원인 : ?
+                intent.putExtra("dto", list.get(idx));
                 context.startActivity(intent);
             }
         });
@@ -68,7 +68,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 4;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

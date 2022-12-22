@@ -50,6 +50,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_newsfeed_moment"
                 android:padding="10dp"
+                android:background="#FFFFFF"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"/>
 

@@ -9,7 +9,7 @@
         android:id="@+id/rel_myblog"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="3"
         android:background="@drawable/photo1"
         android:padding="20dp">
         <!-- 프로필 그룹 -->
@@ -45,16 +45,16 @@
             android:id="@+id/imgv_myblog_profile"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_above="@id/btn_myblog_homeset"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
             android:src="@drawable/profile_img1" />
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_above="@id/btn_myblog_homeset"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="5dp"
             android:layout_toRightOf="@id/imgv_myblog_profile"
+            android:layout_alignParentBottom="true"
             android:gravity="center_vertical"
             android:orientation="vertical">
             <TextView
@@ -75,55 +75,7 @@
                 android:textStyle="bold" />
         </LinearLayout>
         <!-- 버튼 그룹 -->
-        <ImageView
-            android:id="@+id/btn_myblog_homeset"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/icon_setting" />
-        <TextView
-            android:id="@+id/tv_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/btn_myblog_homeset"
-            android:gravity="center_vertical"
-            android:text="홈편집"
-            android:textColor="#fff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-        <ImageView
-            android:id="@+id/imgv_graph"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="30dp"
-            android:src="@drawable/icon_graph" />
-        <ImageView
-            android:id="@+id/imgv_neighbor"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="30dp"
-            android:layout_toLeftOf="@+id/imgv_graph"
-            android:src="@drawable/icon_neighbor" />
-        <ImageView
-            android:id="@+id/imgv_thanks"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="30dp"
-            android:layout_toLeftOf="@+id/imgv_neighbor"
-            android:src="@drawable/icon_thanks" />
-        <ImageView
-            android:id="@+id/imgv_list"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/imgv_thanks"
-            android:src="@drawable/icon_category" />
+
     </RelativeLayout>
     <LinearLayout
         android:layout_weight="5"

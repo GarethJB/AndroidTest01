@@ -70,7 +70,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 8;
+        return 6;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

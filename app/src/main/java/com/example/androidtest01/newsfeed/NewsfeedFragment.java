@@ -19,7 +19,8 @@ import java.util.ArrayList;
 
 public class NewsfeedFragment extends Fragment {
     RecyclerView recv_newsfeed_moment, recv_newsfeed_feed;
-    ArrayList<BlogDTO> list = new ArrayList<>();
+    ArrayList<BlogDTO> listFeed = new ArrayList<>();
+    ArrayList<BlogDTO> listMoment = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,10 +31,11 @@ public class NewsfeedFragment extends Fragment {
         recv_newsfeed_feed = v.findViewById(R.id.recv_newsfeed_feed);
 
         BlogItem item = new BlogItem();
-        list = item.getPostingItem();
+        listFeed = item.getNewsfeedFeed();
+        listMoment = item.getNewsfeedMoment();
 
-        MomentAdapter adapter_moment = new MomentAdapter(inflater, getContext(), list);
-        FeedAdapter adapter_feed = new FeedAdapter(inflater, getContext(), list);
+        MomentAdapter adapter_moment = new MomentAdapter(inflater, getContext(), listMoment);
+        FeedAdapter adapter_feed = new FeedAdapter(inflater, getContext(), listFeed);
 
         recv_newsfeed_moment.setAdapter(adapter_moment);
         recv_newsfeed_moment.setLayoutManager(CommonMethod.getManagerHorizontal(getContext()));

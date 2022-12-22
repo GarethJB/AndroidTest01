@@ -88,6 +88,7 @@
     <ImageView
         android:id="@+id/imgv_photo"
         android:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
         android:layout_gravity="center"
         android:layout_width="90dp"
         android:layout_height="90dp"/>

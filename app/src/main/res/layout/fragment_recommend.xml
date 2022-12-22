@@ -92,29 +92,39 @@
                     android:id="@+id/recv_rcm_list2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-                <!-- 오늘의 동영상 -->
+
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#EAEAEA"
+                    android:background="#74E5F4"
                     android:gravity="center_vertical"
-                    android:padding="10dp">
-
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="오늘의 동영상"
-                        android:textColor="#535353"
+                        android:id="@+id/tv_rcm_topic1"
+                        android:text="핫토픽"
                         android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#535353"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_rcm_topic2"
+                        android:text="대설풍경"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#535353"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv_rcm_topic1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                 </RelativeLayout>
-
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recv_rcm_video"
+                    android:id="@+id/recv_rcm_hotiopic"
+                    android:background="#74E5F4"
+                    android:padding="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="250dp"
-                    android:background="#EAEAEA"
-                    android:padding="10dp" />
+                    android:layout_height="250dp"/>
+
 
                 <!-- 추천리스트3 -->
                 <androidx.recyclerview.widget.RecyclerView
@@ -123,44 +133,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <RelativeLayout
-                android:background="#74E5F4"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-                <TextView
-                    android:id="@+id/tv_rcm_topic1"
-                    android:text="핫토픽"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#535353"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tv_rcm_topic2"
-                    android:text="대설풍경"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="#535353"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/tv_rcm_topic1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_hotiopic"
-                android:background="#74E5F4"
-                android:padding="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"/>
-
-            <!-- 추천리스트4 -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_rcm_list4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

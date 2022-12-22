@@ -33,7 +33,7 @@ public class NoticeFragment extends Fragment {
         BlogItem b_item = new BlogItem();
 
         c_list = c_item.getCommentItem();
-        b_list = b_item.getPostingItem();
+        b_list = b_item.getMyblog();
 
         recv_notice = v.findViewById(R.id.recv_notice);
         CommentAdapter adapter = new CommentAdapter(inflater, getContext(), c_list, b_list);

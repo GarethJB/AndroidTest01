@@ -37,9 +37,16 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.imgv_photo1.setImageResource(list.get(i).getPhoto());
-        h.imgv_photo2.setImageResource(list.get(i).getPhoto());
-        h.imgv_photo3.setImageResource(list.get(i).getPhoto());
+        if (i == 0) {
+            h.imgv_photo1.setImageResource(list.get(i).getPhoto());
+            h.imgv_photo2.setImageResource(list.get(i+1).getPhoto());
+        }else if(i == 1) {
+            h.imgv_photo1.setImageResource(list.get(i+1).getPhoto());
+            h.imgv_photo2.setImageResource(list.get(i+2).getPhoto());
+        }else if(i == 2) {
+            h.imgv_photo1.setImageResource(list.get(i+2).getPhoto());
+            h.imgv_photo2.setImageResource(list.get(i+3).getPhoto());
+        }
 
         final int idx = i;
         h.imgv_photo1.setOnClickListener(new View.OnClickListener() {
@@ -60,15 +67,6 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
             }
         });
 
-        h.imgv_photo3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, PostingActivity.class);
-                intent.putExtra("dto", list.get(idx*3));
-                context.startActivity(intent);
-            }
-        });
-
     }
 
     @Override
@@ -83,16 +81,15 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 3;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgv_photo1, imgv_photo2, imgv_photo3;
+        ImageView imgv_photo1, imgv_photo2;
         public ViewHolder(@NonNull View v) {
             super(v);
             imgv_photo1 = v.findViewById(R.id.imgv_photo1);
             imgv_photo2 = v.findViewById(R.id.imgv_photo2);
-            imgv_photo3 = v.findViewById(R.id.imgv_photo3);
         }
     }
 }

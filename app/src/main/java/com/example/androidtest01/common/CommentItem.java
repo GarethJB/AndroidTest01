@@ -10,15 +10,12 @@ public class CommentItem {
         ArrayList<CommentDTO> list = new ArrayList<>();
         BlogItem item = new BlogItem();
 
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(1).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(2).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(3).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(4).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(5).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(6).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(7).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(8).getTitle()));
-        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getPostingItem().get(9).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(0).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(1).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(2).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(3).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(4).getTitle()));
+        list.add(new CommentDTO("마마", "정말 대단하시네요", "2022. 12. 20.", item.getMyblog().get(5).getTitle()));
 
 
         return list;
