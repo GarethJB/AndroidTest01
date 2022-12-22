@@ -10,7 +10,7 @@
         <TextView
             android:id="@+id/tv_back"
             android:text="취소"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textColor="#BABABA"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         </LinearLayout>
         <TextView
             android:text="등록"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textColor="#BABABA"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"

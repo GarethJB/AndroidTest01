@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.androidtest01.R;
+import com.example.androidtest01.common.BlogItem;
 import com.example.androidtest01.common.CommonMethod;
 import com.example.androidtest01.blog.BlogDTO;
 

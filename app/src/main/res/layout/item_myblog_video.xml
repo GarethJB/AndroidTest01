@@ -5,17 +5,26 @@
     android:orientation="vertical">
     <TextView
         android:id="@+id/tv_date"
-        android:text="2022. 10. 8."
+        android:text="2022. 12. 18."
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <VideoView
-        android:id="@+id/vdv_video"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/imgv_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/icon_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </FrameLayout>
     <TextView
         android:id="@+id/tv_title"
-        android:text="글제목"
+        android:text="크리스마스 준비"
         android:textSize="14dp"
         android:textColor="#424242"
         android:layout_marginLeft="10dp"
@@ -24,7 +33,7 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_video_title"
-        android:text="동영상제목"
+        android:text="크리스마스가 다가온다"
         android:textStyle="bold"
         android:textSize="16dp"
         android:textColor="#000"

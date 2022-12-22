@@ -3,6 +3,7 @@ package com.example.androidtest01.myblog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,7 +27,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.imgv_video.setImageResource(R.drawable.video);
     }
 
     @Override
@@ -45,9 +46,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView imgv_video;
         public ViewHolder(@NonNull View v) {
             super(v);
+            imgv_video = v.findViewById(R.id.imgv_video);
         }
     }
 }

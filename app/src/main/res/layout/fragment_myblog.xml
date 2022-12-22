@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:background="@drawable/photo1"
+        android:background="@drawable/myblog_back"
         android:padding="20dp">
         <!-- 프로필 그룹 -->
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="5dp"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/profile_img1" />
+            android:src="@drawable/myblogpro" />
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -103,19 +103,19 @@
                 <ImageView
                     android:id="@+id/imgv_chanege_photo"
                     android:src="@drawable/icon_photo"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_list"
                     android:src="@drawable/icon_list"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_feed"
                     android:src="@drawable/icon_feed"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
