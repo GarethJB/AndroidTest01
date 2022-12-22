@@ -10,13 +10,8 @@ import android.widget.TextView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
-import com.example.androidtest01.blog.CommentDTO;
-import com.example.androidtest01.common.BlogItem;
 import com.example.androidtest01.common.CommentItem;
-import com.example.androidtest01.moment.MomentActivity;
 import com.example.androidtest01.posting.PostingActivity;
-
-import java.util.ArrayList;
 
 public class CommentActivity extends AppCompatActivity {
     ImageView imgv_back;

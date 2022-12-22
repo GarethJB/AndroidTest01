@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
 import com.example.androidtest01.blog.CommentDTO;
-import com.example.androidtest01.common.BlogItem;
+import com.example.androidtest01.newsfeed.ItemFeed;
 import com.example.androidtest01.common.CommentItem;
 import com.example.androidtest01.common.CommonMethod;
 
@@ -30,7 +30,7 @@ public class NoticeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_notice, container, false);
 
         CommentItem c_item = new CommentItem();
-        BlogItem b_item = new BlogItem();
+        ItemFeed b_item = new ItemFeed();
 
         c_list = c_item.getCommentItem();
         b_list = b_item.getMyblog();

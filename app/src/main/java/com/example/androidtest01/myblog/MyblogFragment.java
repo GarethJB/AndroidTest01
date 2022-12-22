@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
-import com.example.androidtest01.common.BlogItem;
+import com.example.androidtest01.newsfeed.ItemFeed;
 import com.example.androidtest01.common.CommonMethod;
 
 import java.util.ArrayList;

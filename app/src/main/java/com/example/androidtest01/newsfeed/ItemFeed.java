@@ -1,4 +1,4 @@
-package com.example.androidtest01.common;
+package com.example.androidtest01.newsfeed;
 
 import com.example.androidtest01.R;
 import com.example.androidtest01.blog.BlogDTO;
