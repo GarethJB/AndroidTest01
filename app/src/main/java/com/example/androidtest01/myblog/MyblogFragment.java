@@ -40,7 +40,7 @@ public class MyblogFragment extends Fragment {
         BlogItem item = new BlogItem();
         list = item.getMyblog();
 
-        imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+        imgv_chanege_list.setImageResource(R.drawable.icon_list);
 
 
 
@@ -68,10 +68,10 @@ public class MyblogFragment extends Fragment {
         imgv_chanege_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgv_chanege_photo.setImageResource(R.drawable.icon_photo_fill);
-                imgv_chanege_list.setImageResource(R.drawable.icon_list);
-                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
-                imgv_chanege_video.setImageResource(R.drawable.icon_video);
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed_fill);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video_fill);
                 recv_myblog_photo.setVisibility(View.VISIBLE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.GONE);
@@ -82,10 +82,10 @@ public class MyblogFragment extends Fragment {
         imgv_chanege_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
-                imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
-                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
-                imgv_chanege_video.setImageResource(R.drawable.icon_video);
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo_fill);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed_fill);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video_fill);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.VISIBLE);
                 recv_myblog_feed.setVisibility(View.GONE);
@@ -96,10 +96,10 @@ public class MyblogFragment extends Fragment {
         imgv_chanege_feed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
-                imgv_chanege_list.setImageResource(R.drawable.icon_list);
-                imgv_chanege_feed.setImageResource(R.drawable.icon_feed_fill);
-                imgv_chanege_video.setImageResource(R.drawable.icon_video);
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo_fill);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video_fill);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.VISIBLE);
@@ -110,10 +110,10 @@ public class MyblogFragment extends Fragment {
         imgv_chanege_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgv_chanege_photo.setImageResource(R.drawable.icon_photo);
-                imgv_chanege_list.setImageResource(R.drawable.icon_list);
-                imgv_chanege_feed.setImageResource(R.drawable.icon_feed);
-                imgv_chanege_video.setImageResource(R.drawable.icon_video_fill);
+                imgv_chanege_photo.setImageResource(R.drawable.icon_photo_fill);
+                imgv_chanege_list.setImageResource(R.drawable.icon_list_fill);
+                imgv_chanege_feed.setImageResource(R.drawable.icon_feed_fill);
+                imgv_chanege_video.setImageResource(R.drawable.icon_video);
                 recv_myblog_photo.setVisibility(View.GONE);
                 recv_myblog_list.setVisibility(View.GONE);
                 recv_myblog_feed.setVisibility(View.GONE);

@@ -102,25 +102,25 @@
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/imgv_chanege_photo"
-                    android:src="@drawable/icon_photo"
+                    android:src="@drawable/icon_photo_fill"
                     android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_list"
-                    android:src="@drawable/icon_list"
+                    android:src="@drawable/icon_list_fill"
                     android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_feed"
-                    android:src="@drawable/icon_feed"
+                    android:src="@drawable/icon_feed_fill"
                     android:layout_marginRight="15dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <ImageView
                     android:id="@+id/imgv_chanege_video"
-                    android:src="@drawable/icon_video"
+                    android:src="@drawable/icon_video_fill"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
             </LinearLayout>
