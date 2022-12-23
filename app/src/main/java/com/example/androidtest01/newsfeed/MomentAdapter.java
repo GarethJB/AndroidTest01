@@ -38,7 +38,7 @@ public class MomentAdapter extends RecyclerView.Adapter<MomentAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-      //  h.imgv_photo.setImageResource(list.get(i).getPhoto());
+        h.imgv_photo.setImageResource(list.get(i).getPhoto());
        // h.imgv_photo.setBackgroundResource(list.get(i).getPhoto());
 
         h.imgv_profile.setImageResource(list.get(i).getProfile());

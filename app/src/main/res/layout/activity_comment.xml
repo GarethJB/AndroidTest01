@@ -21,8 +21,8 @@
                 android:id="@+id/imgv_back"
                 android:src="@drawable/icon_back"
                 android:layout_centerVertical="true"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
             <TextView
                 android:id="@+id/tv_blogname"
                 android:text="블로그제목"
